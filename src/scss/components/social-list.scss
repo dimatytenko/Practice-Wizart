@@ -1,0 +1,18 @@
+.social-list {
+  display: flex;
+  gap: 5px;
+  &__svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    background-color: $color-logo-primary;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  & svg {
+    width: 15px;
+    height: 15px;
+  }
+}

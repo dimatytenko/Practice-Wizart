@@ -1,3 +1,74 @@
-//====================================================================================================
+.footer {
+  background-color: $back-footer-header;
+  &__container {
+    padding-top: 15px;
+    padding-bottom: 25px;
+    @media (min-width: $mobile) {
+      display: flex;
+      padding-top: 35px;
+      padding-bottom: 60px;
+    }
+  }
 
-//====================================================================================================
+  &__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 27px;
+
+    @media (min-width: $mobile) {
+      margin-bottom: 0;
+      align-items: start;
+      @include adaptiveValue("margin-right", 152, 5);
+    }
+  }
+  &__social-list-logo {
+    @media (min-width: $mobile) {
+      display: none;
+    }
+  }
+  &__list + &__list {
+    margin-top: 35px;
+
+    @media (min-width: $mobile) {
+      margin-top: 0;
+    }
+  }
+
+  &__list {
+    font-weight: 300;
+    font-size: rem(18);
+    line-height: 1.11;
+    color: $color-fonts-footer;
+
+    & li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    @media (min-width: $mobile) {
+      font-size: rem(14);
+      line-height: 1.14;
+      max-width: 264px;
+      @include adaptiveValue("margin-right", 20, 5);
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__copy {
+    margin-top: 35px;
+    font-weight: 300;
+    font-size: rem(14);
+    line-height: 1.14;
+    color: $color-fonts-footer;
+  }
+  &__social-list-copy {
+    display: none;
+    @media (min-width: $mobile) {
+      display: block;
+    }
+  }
+}
