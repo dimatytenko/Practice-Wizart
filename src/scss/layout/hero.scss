@@ -1,0 +1,47 @@
+.hero {
+  background-color: $back-secondary;
+  &__container {
+    position: relative;
+    padding-top: 103px;
+    padding-bottom: 270px;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 100;
+    font-size: rem(33);
+    line-height: 0.97;
+    letter-spacing: rem(-0.5);
+  }
+
+  &__title--mod {
+    font-weight: 500;
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+@media (min-width: $tablet) {
+  .hero {
+    background-color: $back-primary;
+
+    &__container {
+      display: flex;
+    }
+
+    &__title {
+      font-size: rem(60);
+      margin-right: 10px;
+      @media (min-width: $pc) {
+        font-size: rem(96);
+      }
+    }
+
+    &__img {
+      position: relative;
+    }
+  }
+}

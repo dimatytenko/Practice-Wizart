@@ -5,6 +5,7 @@
     padding-bottom: 25px;
     @media (min-width: $mobile) {
       display: flex;
+      justify-content: space-between;
       padding-top: 35px;
       padding-bottom: 60px;
     }
@@ -27,6 +28,7 @@
       display: none;
     }
   }
+
   &__list + &__list {
     margin-top: 35px;
 
@@ -41,15 +43,25 @@
     line-height: 1.11;
     color: $color-fonts-footer;
 
-    & li:not(:last-child) {
+    & li:first-child {
       margin-bottom: 10px;
     }
+
     @media (min-width: $mobile) {
       font-size: rem(14);
       line-height: 1.14;
-      max-width: 264px;
+      max-width: 340px;
+      height: auto;
       @include adaptiveValue("margin-right", 20, 5);
+
+      & li:not(:last-child) {
+        margin-bottom: 15px;
+      }
     }
+  }
+
+  &__list--mod {
+    font-weight: 600;
   }
 
   &__social {
@@ -64,11 +76,29 @@
     font-size: rem(14);
     line-height: 1.14;
     color: $color-fonts-footer;
+    @media (min-width: $mobile) {
+      margin-top: unset;
+    }
   }
   &__social-list-copy {
     display: none;
     @media (min-width: $mobile) {
       display: block;
+    }
+  }
+}
+
+.social-net {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  &__item {
+    cursor: pointer;
+    & svg {
+      width: 15px;
+      height: 15px;
+      fill: $color-fonts-footer;
+      margin-right: 5px;
     }
   }
 }
