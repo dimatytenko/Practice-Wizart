@@ -1,14 +1,8 @@
 .footer {
-  background-color: $back-footer-header;
+  background-color: $back-footer;
   &__container {
     padding-top: 15px;
     padding-bottom: 25px;
-    @media (min-width: $mobile) {
-      display: flex;
-      justify-content: space-between;
-      padding-top: 35px;
-      padding-bottom: 60px;
-    }
   }
 
   &__logo {
@@ -16,25 +10,10 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 27px;
-
-    @media (min-width: $mobile) {
-      margin-bottom: 0;
-      align-items: start;
-      @include adaptiveValue("margin-right", 152, 5);
-    }
-  }
-  &__social-list-logo {
-    @media (min-width: $mobile) {
-      display: none;
-    }
   }
 
   &__list + &__list {
     margin-top: 35px;
-
-    @media (min-width: $mobile) {
-      margin-top: 0;
-    }
   }
 
   &__list {
@@ -45,18 +24,6 @@
 
     & li:first-child {
       margin-bottom: 10px;
-    }
-
-    @media (min-width: $mobile) {
-      font-size: rem(14);
-      line-height: 1.14;
-      max-width: 340px;
-      height: auto;
-      @include adaptiveValue("margin-right", 20, 5);
-
-      & li:not(:last-child) {
-        margin-bottom: 15px;
-      }
     }
   }
 
@@ -82,7 +49,43 @@
   }
   &__social-list-copy {
     display: none;
-    @media (min-width: $mobile) {
+  }
+
+  @media (min-width: $mobile) {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 35px;
+      padding-bottom: 60px;
+    }
+
+    &__logo {
+      margin-bottom: 0;
+      align-items: start;
+      @include adaptiveValue("margin-right", 100, 5);
+    }
+
+    &__social-list-logo {
+      display: none;
+    }
+
+    &__list {
+      font-size: rem(14);
+      line-height: 1.14;
+      max-width: 340px;
+      height: auto;
+      @include adaptiveValue("margin-right", 20, 5);
+
+      & li:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &__list + &__list {
+      margin-top: 0;
+    }
+
+    &__social-list-copy {
       display: block;
     }
   }

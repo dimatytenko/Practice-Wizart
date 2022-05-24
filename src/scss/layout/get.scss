@@ -1,0 +1,115 @@
+.get {
+  background-color: $back-primary;
+
+  &__container {
+    padding-top: 40px;
+    padding-bottom: 172px;
+    background: url("@img/get/get-mob-1x.png") 0 0 no-repeat;
+    background-position: bottom right 15px;
+    background-size: 264px 242px;
+  }
+
+  &__title {
+    font-weight: 100;
+    font-size: rem(33);
+    line-height: 0.97;
+    letter-spacing: -0.5px;
+    margin-bottom: 32px;
+  }
+
+  &__title--mod {
+    font-weight: 400;
+  }
+
+  &__list {
+  }
+
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &__desc {
+    font-weight: 300;
+    line-height: 1.12;
+  }
+
+  &__button {
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: 1.11;
+    text-decoration-line: underline;
+    width: 50px;
+  }
+
+  @media (min-device-pixel-ratio: 2) and (max-width: $mobile),
+    (min-resolution: 192dpi) and (max-width: $mobile),
+    (min-resolution: 2dppx) and(max-width: $mobile) {
+    &__container {
+      background: url("@img/get/get-mob-2x.png");
+    }
+  }
+
+  @media (min-width: $tablet) {
+    &__container {
+      padding-top: 120px;
+      padding-bottom: 110px;
+      background-image: url("@img/get/get-tab-1x.png");
+      background-size: 362px 360px;
+    }
+
+    &__title {
+      font-weight: 200;
+      font-size: rem(48);
+      line-height: 1;
+      letter-spacing: -0.5px;
+      max-width: 780px;
+      margin-bottom: 32px;
+    }
+
+    &__list {
+      display: flex;
+      gap: 15px;
+    }
+    &__item {
+      max-width: 264px;
+
+      margin-bottom: 30px;
+    }
+
+    &__desc {
+      font-size: rem(14);
+      line-height: 1.14;
+    }
+
+    &__button {
+      position: relative;
+      padding-left: 40px;
+    }
+
+    &__button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url("@img/get/hand.svg") 0 0 no-repeat;
+      // background-color: #fff;
+      width: 30px;
+      height: 30px;
+      fill: #fff;
+    }
+  }
+
+  @media (min-width: $pc) {
+    &__list {
+      justify-content: center;
+    }
+  }
+
+  @media (min-device-pixel-ratio: 2) and (min-width: $tablet),
+    (min-resolution: 192dpi) and (min-width: $tablet),
+    (min-resolution: 2dppx) and(min-width: $tablet) {
+    &__container {
+      background: url("@img/get/get-get-2x.png");
+    }
+  }
+}

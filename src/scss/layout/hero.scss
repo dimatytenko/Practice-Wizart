@@ -20,16 +20,26 @@
 
   &__img {
     position: absolute;
-    right: 0;
+    right: 15px;
     bottom: 0;
   }
 }
+
+@media (min-width: $mobile) {
+  .hero {
+    &__img {
+      right: 0;
+    }
+  }
+}
+
 @media (min-width: $tablet) {
   .hero {
     background-color: $back-primary;
 
     &__container {
       display: flex;
+      padding-bottom: 100px;
     }
 
     &__title {
