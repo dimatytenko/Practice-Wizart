@@ -1,17 +1,83 @@
-<div class="page__send">
+<div class="page__send send">
   <div class="send__container">
-    <form
-      action="files/sendmail/sendmail.php"
-      method="POST"
-    >
-      <input
-        type="text"
-        name="form[email]"
-        data-error="Error"
-        placeholder="E-mail"
-        class="input"
-      />
-      <button type="submit" class="button">Send</button>
-    </form>
+    <div class="send__head">
+      <h2 class="send__title">ЗАМОВИТИ КОНСУЛЬТАЦІЮ:</h2>
+      <p class="send__desc">
+        Не знаєте, з чого почати? Замовте консультацію наших
+        фахівців. Це безкоштовно і ні до чого не зобов'язує.
+      </p>
+    </div>
+    <div class="send__form form">
+      <form class="form__body" data-goto-error data-dev>
+        <div class="form__body-box">
+          <div class="form__body-top">
+            <div class="form__item">
+              <label for="formName" class="form__label"
+                >Ім’я*</label
+              >
+              <input
+                id="formName"
+                autocomplete="off"
+                type="text"
+                name="form[name]"
+                data-error="Уведіть будь-ласка ім'я"
+                class="form__input"
+                data-validate
+                data-required="name"
+              />
+            </div>
+            <div class="form__item">
+              <label for="formEmail" class="form__label"
+                >E-mail*</label
+              >
+              <input
+                id="formEmail"
+                autocomplete="off"
+                type="text"
+                name="form[email]"
+                data-error="Уведіть будь-ласка ваш мейл"
+                class="form__input"
+                data-validate
+                data-required="email"
+              />
+            </div>
+          </div>
+          <div class="form__body-bottom">
+            <div class="form__item">
+              <label for="formPhone" class="form__label"
+                >Телефон*</label
+              >
+              <input
+                id="formPhone"
+                autocomplete="off"
+                type="number"
+                name="form[number]"
+                data-error="Уведіть будь-ласка номер телефону"
+                class="form__input"
+                data-validate
+                data-required="number"
+              />
+            </div>
+            <div class="form__item">
+              <label for="formMessage" class="form__label"
+                >Повідомлення</label
+              >
+              <textarea
+                id="formMessage"
+                autocomplete="off"
+                name="form[message]"
+                data-error="уведіть номер телефону"
+                class="form__input"
+                data-autoheight
+                style="height: 20px"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="form__button">
+          Відправити
+        </button>
+      </form>
+    </div>
   </div>
 </div>

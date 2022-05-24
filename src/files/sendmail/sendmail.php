@@ -22,14 +22,29 @@
 	*/
 
 	//От кого письмо
-	$mail->setFrom('from@gmail.com', 'Фрилансер по жизни'); // Указать нужный E-mail
+	$mail->setFrom('amgpetronass@gmail.com', '!!!'); // Указать нужный E-mail
 	//Кому отправить
-	$mail->addAddress('to@gmail.com'); // Указать нужный E-mail
+	$mail->addAddress('to@amgpetronass.com'); // Указать нужный E-mail
 	//Тема письма
-	$mail->Subject = 'Привет! Это "Фрилансер по жизни"';
+	$mail->Subject = '!!!';
 
 	//Тело письма
-	$body = '<h1>Встречайте супер письмо!</h1>';
+	$body = '<h1>!!!</h1>';
+	
+	if(trim(!empty($_POST['name']))){
+		$body.='<p><strong>Имя:</strong> '.$_POST['name'].'</p>';
+	}
+	if(trim(!empty($_POST['email']))){
+		$body.='<p><strong>E-mail:</strong> '.$_POST['email'].'</p>';
+	}
+
+	if(trim(!empty($_POST['number']))){
+		$body.='<p><strong>number:</strong> '.$_POST['number'].'</p>';
+	}
+	
+	if(trim(!empty($_POST['message']))){
+		$body.='<p><strong>Сообщение:</strong> '.$_POST['message'].'</p>';
+	}
 
 	//if(trim(!empty($_POST['email']))){
 		//$body.=$_POST['email'];
