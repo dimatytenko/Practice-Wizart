@@ -1,0 +1,158 @@
+.advance {
+  border-top: 0.2px solid #000000;
+  background-color: $back-secondary;
+  &__container {
+    position: relative;
+    padding-top: 35px;
+    padding-bottom: 460px;
+    background-image: url("@img/advance/exp-back-mob-1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 95%;
+  }
+
+  @media (min-device-pixel-ratio: 2) and (max-width: $tablet),
+    (min-resolution: 192dpi) and (max-width: $tablet),
+    (min-resolution: 2dppx) and (max-width: $tablet) {
+    &__container {
+      background-image: url("@img/advance/exp-back-mob-2x.png");
+    }
+  }
+
+  &__box + &__box {
+    margin-top: 40px;
+  }
+
+  &__title {
+    font-weight: 100;
+    font-size: rem(33);
+    line-height: 0.97;
+    letter-spacing: -0.5px;
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    font-size: rem(30);
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  &__desc {
+    font-weight: 300;
+    line-height: 1.12;
+    max-width: 824px;
+    margin: 0 auto;
+  }
+
+  &__slider {
+    max-width: 824px;
+    max-height: 619px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  &__wrapper {
+  }
+
+  &__slide img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__swiper-button-prev.swiper-button-prev {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+
+  &__swiper-button-prev.swiper-button-prev:before {
+  }
+
+  &__swiper-button-prev.swiper-button-prev:after {
+  }
+
+  &____slider {
+  }
+
+  &__swiper-button-next {
+  }
+  .swiper-button-prev {
+  }
+  .swiper-button-next {
+  }
+
+  &__slogan {
+    position: absolute;
+    right: 30px;
+    bottom: 35px;
+    font-weight: 100;
+    font-size: rem(33);
+    line-height: 0.97;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    max-width: 260px;
+  }
+
+  @media (min-width: $tablet) {
+    &__container {
+      background-image: url("@img/advance/exp-back-tab-1x.png");
+      background-position: 60px bottom;
+    }
+
+    @media (min-device-pixel-ratio: 2) and (min-width: $tablet),
+      (min-resolution: 192dpi) and (min-width: $tablet),
+      (min-resolution: 2dppx) and (min-width: $tablet) {
+      &__container {
+        background-image: url("@img/advance/exp-back-tab-2x.png");
+      }
+    }
+
+    &__slogan {
+      left: 564px;
+      bottom: 30px;
+      font-weight: 400;
+      font-size: rem(48);
+      line-height: 1;
+      max-width: 744px;
+    }
+  }
+
+  @media (min-width: $pc) {
+    background-color: $back-primary;
+    &__box {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    &__box--mod {
+      flex-direction: row;
+    }
+
+    &__subtitle {
+      order: 1;
+      flex-shrink: 1;
+      align-self: flex-start;
+      transform-origin: center center;
+      transform: rotateZ(-90deg) translate(-36%, 0);
+
+      margin-bottom: 0;
+    }
+
+    &__desc {
+      max-width: 264px;
+      padding: 0px 10px 0px 10px;
+      margin: 0;
+    }
+
+    &__slider {
+      margin: 0;
+    }
+  }
+}
+
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
