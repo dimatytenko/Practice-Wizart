@@ -4,7 +4,8 @@
   &__container {
     padding-top: 40px;
     padding-bottom: 172px;
-    background: url("@img/get/get-mob-1x.png") 0 0 no-repeat;
+    background: url("@img/get/get-mob-1x.webp");
+    background-repeat: no-repeat;
     background-position: bottom right 15px;
     background-size: 264px 242px;
   }
@@ -45,7 +46,10 @@
     (min-resolution: 192dpi) and (max-width: $mobile),
     (min-resolution: 2dppx) and(max-width: $mobile) {
     &__container {
-      background: url("@img/get/get-mob-2x.png");
+      background: url("@img/get/get-mob-2x.webp");
+      background-repeat: no-repeat;
+      background-position: bottom right 15px;
+      background-size: 264px 242px;
     }
   }
 
@@ -57,7 +61,9 @@
     &__container {
       padding-top: 120px;
       padding-bottom: 110px;
-      background-image: url("@img/get/get-tab-1x.png");
+      background-image: url("@img/get/get-tab-1x.webp");
+      background-repeat: no-repeat;
+      background-position: bottom right 15px;
       background-size: 362px 360px;
     }
 
@@ -96,7 +102,6 @@
       top: 0;
       left: 0;
       background: url("@img/get/hand.svg") 0 0 no-repeat;
-      // background-color: #fff;
       width: 30px;
       height: 30px;
       fill: #fff;
@@ -113,7 +118,10 @@
     (min-resolution: 192dpi) and (min-width: $tablet),
     (min-resolution: 2dppx) and(min-width: $tablet) {
     &__container {
-      background: url("@img/get/get-get-2x.png");
+      background: url("@img/get/get-tab-2x.webp");
+      background-repeat: no-repeat;
+      background-position: bottom right 15px;
+      background-size: 362px 360px;
     }
   }
 }

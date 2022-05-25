@@ -1,9 +1,9 @@
 .hero {
   background-color: $back-secondary;
   &__container {
-    position: relative;
     padding-top: 103px;
     padding-bottom: 270px;
+    position: relative;
   }
 
   &__title {
@@ -23,18 +23,14 @@
     right: 15px;
     bottom: 0;
   }
-}
 
-@media (min-width: $mobile) {
-  .hero {
-    &__img {
-      right: 0;
-    }
-  }
-}
+  // @media (min-width: $mobile) {
+  //   &__img {
+  //     right: 0;
+  //   }
+  // }
 
-@media (min-width: $tablet) {
-  .hero {
+  @media (min-width: $tablet) {
     background-color: $back-primary;
 
     &__container {
@@ -45,13 +41,16 @@
     &__title {
       font-size: rem(60);
       margin-right: 10px;
-      @media (min-width: $pc) {
-        font-size: rem(96);
-      }
     }
 
     &__img {
       position: relative;
+    }
+  }
+
+  @media (min-width: $pc) {
+    &__title {
+      font-size: rem(96);
     }
   }
 }
