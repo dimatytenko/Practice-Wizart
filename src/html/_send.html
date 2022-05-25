@@ -8,7 +8,12 @@
       </p>
     </div>
     <div class="send__form form">
-      <form class="form__body" data-goto-error data-dev>
+      <form
+        class="form__body"
+        data-goto-error
+        data-dev
+        data-popup-message="#form-message"
+      >
         <div class="form__body-box">
           <div class="form__body-top">
             <div class="form__item">
@@ -22,6 +27,7 @@
                 name="form[name]"
                 data-error="Уведіть будь-ласка ім'я"
                 class="form__input"
+                placeholder="Djavelin"
                 data-validate
                 data-required="name"
               />
@@ -37,6 +43,7 @@
                 name="form[email]"
                 data-error="Уведіть будь-ласка ваш мейл"
                 class="form__input"
+                placeholder="name@mail.com"
                 data-validate
                 data-required="email"
               />
@@ -54,12 +61,15 @@
                 name="form[number]"
                 data-error="Уведіть будь-ласка номер телефону"
                 class="form__input"
+                placeholder="0661234567"
                 data-validate
                 data-required="number"
               />
             </div>
             <div class="form__item">
-              <label for="formMessage" class="form__label"
+              <label
+                for="formMessage"
+                class="form__label label-textarea"
                 >Повідомлення</label
               >
               <textarea

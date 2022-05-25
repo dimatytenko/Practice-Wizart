@@ -1,0 +1,23 @@
+.form-message {
+  &__content {
+    background-color: $back-primary;
+  }
+
+  &__button {
+    display: block;
+    margin-left: auto;
+  }
+
+  &__head {
+    min-height: 150px;
+    max-width: 768px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: rem(20);
+  }
+}

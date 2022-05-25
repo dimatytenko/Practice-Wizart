@@ -87,6 +87,16 @@
     border-bottom: 1px solid rgba(219, 50, 21, 0.38);
   }
 
+  &__label.label-textarea {
+    transition: all 0.9s ease 0s;
+  }
+
+  &__label.label-textarea.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
   &__button {
     font-weight: 500;
     line-height: 1.25;
@@ -101,6 +111,10 @@
     &:focus,
     &:hover {
       padding: 13px 23px;
+    }
+
+    .hidden {
+      display: none;
     }
   }
 
@@ -124,10 +138,6 @@
 
     textarea.form__input {
       resize: vertical;
-    }
-
-    textarea.form__input::placeholder {
-      padding: 0px 0px 0px 0px;
     }
   }
 

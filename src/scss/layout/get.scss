@@ -17,38 +17,38 @@
     &__container {
       background-image: url("@img/get/get-mob-2x.png");
     }
+  }
 
-    &__title {
-      font-weight: 100;
-      font-size: rem(33);
-      line-height: 0.97;
-      letter-spacing: -0.5px;
-      margin-bottom: 32px;
-    }
+  &__title {
+    font-weight: 100;
+    font-size: rem(33);
+    line-height: 0.97;
+    letter-spacing: -0.5px;
+    margin-bottom: 32px;
+  }
 
-    &__title--mod {
-      font-weight: 400;
-    }
+  &__title--mod {
+    font-weight: 400;
+  }
 
-    &__list {
-    }
+  &__list {
+  }
 
-    &__item {
-      margin-bottom: 30px;
-    }
+  &__item {
+    margin-bottom: 30px;
+  }
 
-    &__desc {
-      font-weight: 300;
-      line-height: 1.12;
-    }
+  &__desc {
+    font-weight: 300;
+    line-height: 1.12;
+  }
 
-    &__button {
-      font-weight: 500;
-      font-size: rem(18);
-      line-height: 1.11;
-      text-decoration-line: underline;
-      width: 50px;
-    }
+  &__button {
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: 1.11;
+    text-decoration-line: underline;
+    width: 50px;
   }
 
   @media (min-width: $mobile) {
