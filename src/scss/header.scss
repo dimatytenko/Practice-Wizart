@@ -144,7 +144,7 @@
 
   @media (min-width: $mobile) {
     &__link {
-      font-size: rem(14);
+      font-size: rem(13);
     }
 
     &__list {
@@ -155,6 +155,10 @@
       margin-right: 20px;
     }
   }
-}
-.icon-menu {
+
+  @media (min-width: $tablet) {
+    &__link {
+      font-size: rem(14);
+    }
+  }
 }

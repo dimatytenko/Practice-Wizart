@@ -7,7 +7,6 @@
   }
 
   &__title {
-    font-style: normal;
     font-weight: 100;
     font-size: rem(33);
     line-height: 0.97;
@@ -24,12 +23,6 @@
     bottom: 0;
   }
 
-  // @media (min-width: $mobile) {
-  //   &__img {
-  //     right: 0;
-  //   }
-  // }
-
   @media (min-width: $tablet) {
     background-color: $back-primary;
 
@@ -45,6 +38,7 @@
 
     &__img {
       position: relative;
+      right: 0;
     }
   }
 

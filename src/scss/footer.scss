@@ -43,9 +43,6 @@
     font-size: rem(14);
     line-height: 1.14;
     color: $color-fonts-footer;
-    @media (min-width: $mobile) {
-      margin-top: unset;
-    }
   }
   &__social-list-copy {
     display: none;
@@ -63,6 +60,10 @@
       margin-bottom: 0;
       align-items: start;
       @include adaptiveValue("margin-right", 100, 5);
+    }
+
+    &__copy {
+      margin-top: unset;
     }
 
     &__social-list-logo {
