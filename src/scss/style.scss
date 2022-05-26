@@ -148,6 +148,7 @@ body {
 @import "./components/social-list";
 @import "./components/logo";
 @import "./components/popup-form-message";
+@import "./components/swiper-arrows.scss";
 
 // Подключение стилей отдельных блоков
 @import "header";
@@ -157,5 +158,7 @@ body {
 @import "layout/hero";
 @import "layout/project";
 @import "layout/get";
+@import "layout/video";
+
 @import "layout/send";
 @import "layout/advance";

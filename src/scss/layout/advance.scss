@@ -7,6 +7,7 @@
     padding-bottom: 460px;
     background-image: url("@img/advance/exp-back-mob-1x.png");
     background-repeat: no-repeat;
+    background-size: 252px 300px;
     background-position: 0 95%;
   }
 
@@ -41,6 +42,7 @@
     line-height: 1.12;
     max-width: 824px;
     margin: 0 auto;
+    margin-top: 10px;
   }
 
   &__slider {
@@ -58,27 +60,7 @@
     height: 100%;
   }
 
-  &__swiper-button-prev.swiper-button-prev {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #fff;
-  }
-
-  &__swiper-button-prev.swiper-button-prev:before {
-  }
-
-  &__swiper-button-prev.swiper-button-prev:after {
-  }
-
   &____slider {
-  }
-
-  &__swiper-button-next {
-  }
-  .swiper-button-prev {
-  }
-  .swiper-button-next {
   }
 
   &__slogan {
@@ -97,6 +79,7 @@
     &__container {
       background-image: url("@img/advance/exp-back-tab-1x.png");
       background-position: 60px bottom;
+      background-size: 659px 639px;
     }
 
     @media (min-device-pixel-ratio: 2) and (min-width: $tablet),

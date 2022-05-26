@@ -1,0 +1,29 @@
+.main__swiper-button-prev,
+.main__swiper-button-next {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: calc(0px - var(--swiper-navigation-size) / 2);
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: inherit;
+}
+
+.main__swiper-button-prev {
+  left: 10px;
+  right: auto;
+}
+
+.main__swiper-button-prev svg,
+.main__swiper-button-next svg {
+  fill: #fff;
+}
+
+.main__swiper-button-next {
+  right: 10px;
+  left: auto;
+}
