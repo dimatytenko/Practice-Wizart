@@ -41,6 +41,12 @@
     font-size: rem(18);
     line-height: 1.11;
     text-decoration-line: underline;
+    transition: color $transition-primary;
+
+    &:hover,
+    &:focus {
+      color: $color-hover-primary;
+    }
 
     & svg {
       width: 29px;
@@ -49,12 +55,28 @@
     }
   }
 
-  &__hand-bottom {
+  &__hand-top {
     transform: rotate(90deg);
+    transition: fill $transition-primary,
+      transform $transition-primary;
   }
 
-  &__hand-top {
-    transform: rotate(-90deg);
+  &__hand-bottom {
+    transform: translateY(7px) rotate(-90deg);
+    transition: fill $transition-primary,
+      transform $transition-primary;
+  }
+
+  &__btn:hover &__hand-top,
+  &__btn:focus &__hand-top {
+    fill: $color-hover-primary;
+    transform: translateY(7px) rotate(90deg);
+  }
+
+  &__btn:hover &__hand-bottom,
+  &__btn:focus &__hand-bottom {
+    fill: $color-hover-primary;
+    transform: translateY(-7px) rotate(-90deg);
   }
 
   @media (min-width: $tablet) {

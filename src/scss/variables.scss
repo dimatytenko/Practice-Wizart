@@ -2,7 +2,6 @@
 $color-fonts-footer: #ffffff;
 $color-fonts-header: #ffffff;
 $color-fonts-secondary: #ffffff;
-
 // ================================================ //
 
 // ===== colors ==== //
@@ -11,9 +10,25 @@ $color-logo-primary: #ffffff;
 
 // ===== backgrounds ==== //
 $back-footer: #121212;
-$back-menu-header: rgba(0, 0, 0, 0.85);
+$back-menu-header: rgba(0, 0, 0, 0.9);
 $back-primary: #e5e5e5;
 $back-secondary: #ffffff;
 $back-button: #121212;
-
 // ================================================ //
+
+// ===== transitions ==== //
+$transition-primary: 0.7s ease 0s;
+// =================================== //
+
+// ===== colors hovers ==== //
+$color-hover-primary: rgb(116, 67, 67);
+$color-hover-secondary: #ffffff;
+// =================================== //
+
+// ===== form ==== //
+$color-font-label: rgba(0, 0, 0, 0.38);
+$color-label-focus: rgba(182, 90, 90, 0.38);
+$color-border-input: rgba(0, 0, 0, 0.12);
+$color-bordr-input-focus: rgba(118, 209, 189, 0.38);
+$color-bordr-input-error: rgba(219, 50, 21, 0.38);
+// =================================== //

@@ -10,9 +10,28 @@
     background-color: $color-logo-primary;
     border-radius: 50%;
     cursor: pointer;
+    transition: background-color $transition-primary;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      background-color: $color-hover-primary;
+    }
+
+    &:focus-within svg {
+      fill: $color-hover-secondary;
+    }
   }
+
   & svg {
     width: 15px;
     height: 15px;
+    fill: $back-footer;
+    transition: fill $transition-primary;
+
+    &:hover,
+    &:focus {
+      fill: $color-hover-secondary;
+    }
   }
 }

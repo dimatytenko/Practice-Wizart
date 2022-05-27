@@ -49,6 +49,18 @@
     line-height: 1.11;
     text-decoration-line: underline;
     width: 50px;
+    transition: color $transition-primary,
+      transform $transition-primary;
+
+    &:hover,
+    &:focus {
+      color: $color-hover-primary;
+      transform: translateX(15px);
+    }
+  }
+
+  &__svg {
+    display: none;
   }
 
   @media (min-width: $mobile) {
@@ -96,19 +108,25 @@
     }
 
     &__button {
+      display: inline-block;
       position: relative;
-      padding-left: 40px;
+      padding-left: 50px;
     }
 
-    &__button::before {
-      content: "";
+    &__svg {
+      display: block;
+      width: 40px;
+      height: 40px;
       position: absolute;
       top: 0;
       left: 0;
-      background: url("@img/get/hand.svg") 0 0 no-repeat;
-      width: 30px;
-      height: 30px;
-      fill: #fff;
+      fill: $back-primary;
+      transition: fill $transition-primary;
+    }
+
+    &__button:hover svg,
+    &__button:focus svg {
+      fill: $color-hover-primary;
     }
   }
 
