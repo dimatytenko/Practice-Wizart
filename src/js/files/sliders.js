@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation } from "swiper";
+import Swiper, { Navigation, Lazy } from "swiper";
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -34,7 +34,7 @@ function initSliders() {
       // Указываем скласс нужного слайдера
       // Подключаем модули слайдера
       // для конкретного случая
-      modules: [Navigation],
+      modules: [Navigation, Lazy],
       observer: true,
       observeParents: true,
       slidesPerView: 1,
@@ -45,8 +45,8 @@ function initSliders() {
       //touchRatio: 0,
       //simulateTouch: false,
       //loop: true,
-      //preloadImages: false,
-      //lazy: true,
+      preloadImages: false,
+      lazy: true,
 
       /*
 			// Эффекты
@@ -114,7 +114,7 @@ function initSliders() {
       // Указываем скласс нужного слайдера
       // Подключаем модули слайдера
       // для конкретного случая
-      modules: [Navigation],
+      modules: [Navigation, Lazy],
       observer: true,
       observeParents: true,
       slidesPerView: 1,
@@ -125,8 +125,8 @@ function initSliders() {
       //touchRatio: 0,
       //simulateTouch: false,
       //loop: true,
-      //preloadImages: false,
-      //lazy: true,
+      preloadImages: false,
+      lazy: true,
 
       /*
 			// Эффекты
@@ -194,7 +194,7 @@ function initSliders() {
       // Указываем скласс нужного слайдера
       // Подключаем модули слайдера
       // для конкретного случая
-      modules: [Navigation],
+      modules: [Navigation, Lazy],
       observer: true,
       observeParents: true,
       slidesPerView: 1,
@@ -205,8 +205,8 @@ function initSliders() {
       //touchRatio: 0,
       //simulateTouch: false,
       //loop: true,
-      //preloadImages: false,
-      //lazy: true,
+      preloadImages: false,
+      lazy: true,
 
       /*
 			// Эффекты
@@ -286,7 +286,7 @@ function initSliders() {
       //simulateTouch: false,
       //loop: true,
       //preloadImages: false,
-      //lazy: true,
+      // lazy: true,
 
       /*
 			// Эффекты
