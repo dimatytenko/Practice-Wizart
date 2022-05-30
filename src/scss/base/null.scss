@@ -54,7 +54,8 @@ a:visited {
 a:hover {
   text-decoration: none;
 }
-ul li {
+ul,
+ol li {
   list-style: none;
 }
 img {
