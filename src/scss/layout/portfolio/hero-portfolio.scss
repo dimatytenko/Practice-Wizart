@@ -59,7 +59,7 @@
       @include adaptiveValue(" padding-bottom", 130, 30);
 
       display: grid;
-      grid-template-columns: 50% 50%;
+      grid-template-columns: 1fr 1fr;
     }
 
     &__box-right {
