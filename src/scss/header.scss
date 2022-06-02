@@ -7,6 +7,15 @@
   z-index: 10;
   background-color: $back-menu-header;
 
+  &._header-scroll {
+    top: -200%;
+  }
+
+  &._header-show {
+    top: 0;
+    transition: top 1s ease 0s;
+  }
+
   &__container {
     min-height: 70px;
   }
