@@ -7,7 +7,19 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Lazy } from "swiper";
+import Swiper, {
+  Navigation,
+  Pagination,
+  Autoplay,
+  EffectFade,
+  EffectFlip,
+  Lazy,
+  Manipulation,
+  Keyboard,
+  EffectCube,
+  EffectCoverflow,
+  EffectCards,
+} from "swiper";
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -17,7 +29,7 @@ EffectFade, Lazy, Manipulation
 
 // Стили Swiper
 // Базовые стили
-import "../../scss/base/swiper.scss";
+// import "../../scss/base/swiper.scss";
 // Полный набор стилей из scss/libs/swiper.scss
 import "../../scss/libs/swiper.scss";
 // Полный набор стилей из node_modules
@@ -34,44 +46,49 @@ function initSliders() {
       // Указываем скласс нужного слайдера
       // Подключаем модули слайдера
       // для конкретного случая
-      modules: [Navigation, Lazy],
+      modules: [
+        Navigation,
+        Autoplay,
+        EffectFade,
+        EffectCoverflow,
+        Lazy,
+        Manipulation,
+        Keyboard,
+      ],
       observer: true,
       observeParents: true,
       slidesPerView: 1,
-      spaceBetween: 0,
+      spaceBetween: 20,
       autoHeight: true,
-      speed: 800,
+      speed: 700,
+      grabCursor: true,
+      loop: true,
 
-      //touchRatio: 0,
-      //simulateTouch: false,
-      //loop: true,
-      preloadImages: false,
-      lazy: true,
+      effect: "coverflow",
 
-      /*
-			// Эффекты
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
+      // Дополнение к coverflow
+      coverflowEffect: {
+        // Угол
+        rotate: 20,
+        // Наложение
+        stretch: 50,
+        // Тень
+        slideShadows: true,
+      },
 
-      // Пагинация
-
-      // pagination: {
-      //   el: ".swiper-pagination",
-      //   clickable: true,
-      // },
-
-      // Скроллбар
-      /*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
-
+      // Управление клавиатурой
+      keyboard: {
+        // Включить\выключить
+        enabled: true,
+        // Включить\выключить
+        // только когда слайдер
+        // в пределах вьюпорта
+        onlyInViewport: true,
+        // Включить\выключить
+        // управление клавишами
+        // pageUp, pageDown
+        pageUpDown: true,
+      },
       // Кнопки "влево/вправо"
       navigation: {
         prevEl: ".main__swiper-button-prev",
@@ -114,43 +131,34 @@ function initSliders() {
       // Указываем скласс нужного слайдера
       // Подключаем модули слайдера
       // для конкретного случая
-      modules: [Navigation, Lazy],
+      modules: [Navigation, EffectFlip, Keyboard],
       observer: true,
       observeParents: true,
       slidesPerView: 1,
-      spaceBetween: 0,
-      autoHeight: true,
-      speed: 800,
+      spaceBetween: 20,
+      // autoHeight: true,
+      speed: 1300,
+      grabCursor: true,
+      loop: true,
 
-      //touchRatio: 0,
-      //simulateTouch: false,
-      //loop: true,
-      preloadImages: false,
-      lazy: true,
+      effect: "flip",
+      flipEffect: {
+        slideShadows: true,
+      },
 
-      /*
-			// Эффекты
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-
-      // Пагинация
-
-      // pagination: {
-      //   el: ".swiper-pagination",
-      //   clickable: true,
-      // },
-
-      // Скроллбар
-      /*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
+      // Управление клавиатурой
+      keyboard: {
+        // Включить\выключить
+        enabled: true,
+        // Включить\выключить
+        // только когда слайдер
+        // в пределах вьюпорта
+        onlyInViewport: true,
+        // Включить\выключить
+        // управление клавишами
+        // pageUp, pageDown
+        pageUpDown: true,
+      },
 
       // Кнопки "влево/вправо"
       navigation: {
@@ -194,43 +202,54 @@ function initSliders() {
       // Указываем скласс нужного слайдера
       // Подключаем модули слайдера
       // для конкретного случая
-      modules: [Navigation, Lazy],
+      modules: [
+        Navigation,
+        Autoplay,
+        EffectFade,
+        Lazy,
+        Manipulation,
+        Keyboard,
+      ],
       observer: true,
       observeParents: true,
       slidesPerView: 1,
-      spaceBetween: 0,
+      spaceBetween: 20,
       autoHeight: true,
-      speed: 800,
+      speed: 700,
+      grabCursor: true,
+      loop: true,
 
-      //touchRatio: 0,
-      //simulateTouch: false,
-      //loop: true,
-      preloadImages: false,
-      lazy: true,
+      autoplay: {
+        // Пауза между прокруткой
+        delay: 1000,
+        // Закончить на последнем слайде
+        stopOnLastSlide: true,
+        // Отключить после ручного переключения
+        disableOnInteraction: false,
+      },
 
-      /*
-			// Эффекты
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
+      effect: "fade",
 
-      // Пагинация
+      // Дополнение к fade
+      fadeEffect: {
+        // Параллельная
+        // смена прозрачности
+        crossFade: true,
+      },
 
-      // pagination: {
-      //   el: ".swiper-pagination",
-      //   clickable: true,
-      // },
-
-      // Скроллбар
-      /*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
+      // Управление клавиатурой
+      keyboard: {
+        // Включить\выключить
+        enabled: true,
+        // Включить\выключить
+        // только когда слайдер
+        // в пределах вьюпорта
+        onlyInViewport: true,
+        // Включить\выключить
+        // управление клавишами
+        // pageUp, pageDown
+        pageUpDown: true,
+      },
 
       // Кнопки "влево/вправо"
       navigation: {
@@ -274,28 +293,36 @@ function initSliders() {
       // Указываем скласс нужного слайдера
       // Подключаем модули слайдера
       // для конкретного случая
-      modules: [Navigation],
-      observer: true,
-      observeParents: true,
+      modules: [
+        Navigation,
+        EffectFade,
+        Lazy,
+        Manipulation,
+        Keyboard,
+      ],
+      // observer: true,
+      // observeParents: true,
       slidesPerView: 1,
       spaceBetween: 0,
-      autoHeight: true,
-      speed: 800,
+      // autoHeight: true,
+      speed: 700,
+      grabCursor: true,
+      loop: true,
+      // Управление клавиатурой
+      keyboard: {
+        // Включить\выключить
+        enabled: true,
+        // Включить\выключить
+        // только когда слайдер
+        // в пределах вьюпорта
+        onlyInViewport: true,
+        // Включить\выключить
+        // управление клавишами
+        // pageUp, pageDown
+        pageUpDown: true,
+      },
 
-      //touchRatio: 0,
-      //simulateTouch: false,
-      //loop: true,
-      //preloadImages: false,
-      // lazy: true,
-
-      /*
-			// Эффекты
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
+      // Эффекты
 
       // Пагинация
 
@@ -330,14 +357,14 @@ function initSliders() {
         // 	slidesPerView: 2,
         // 	spaceBetween: 20,
         // },
-        // 992: {
-        // 	slidesPerView: 3,
-        // 	spaceBetween: 20,
-        // },
         992: {
           slidesPerView: 2,
           spaceBetween: 15,
         },
+        // 1380: {
+        //   slidesPerView: 2,
+        //   spaceBetween: 15,
+        // },
       },
 
       // События
@@ -385,5 +412,5 @@ window.addEventListener("load", function (e) {
   // Запуск инициализации слайдеров
   initSliders();
   // Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
-  //initSlidersScroll();
+  initSlidersScroll();
 });
