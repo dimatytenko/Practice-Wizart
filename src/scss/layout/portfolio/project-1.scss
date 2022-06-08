@@ -62,11 +62,11 @@
     }
 
     &__img-box-big-4 {
-      grid-column-end: span 2;
+      grid-column: span 2;
     }
 
     &__img-box-big-2 {
-      grid-row-end: span 2;
+      grid-row: span 2;
     }
   }
 
@@ -85,7 +85,7 @@
       grid-template-columns: repeat(3, 1fr);
     }
     &__img-box-big-2 {
-      grid-row-end: unset;
+      grid-row: span 1;
     }
   }
 }

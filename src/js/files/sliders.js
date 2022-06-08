@@ -9,16 +9,13 @@
 // Пример: { Navigation, Autoplay }
 import Swiper, {
   Navigation,
-  Pagination,
   Autoplay,
   EffectFade,
   EffectFlip,
   Lazy,
   Manipulation,
   Keyboard,
-  EffectCube,
   EffectCoverflow,
-  EffectCards,
 } from "swiper";
 /*
 Основниые модули слайдера:
@@ -33,7 +30,7 @@ EffectFade, Lazy, Manipulation
 // Полный набор стилей из scss/libs/swiper.scss
 import "../../scss/libs/swiper.scss";
 // Полный набор стилей из node_modules
-// import 'swiper/css';
+// import "swiper/css";
 
 // Инициализация слайдеров
 function initSliders() {
@@ -202,14 +199,7 @@ function initSliders() {
       // Указываем скласс нужного слайдера
       // Подключаем модули слайдера
       // для конкретного случая
-      modules: [
-        Navigation,
-        Autoplay,
-        EffectFade,
-        Lazy,
-        Manipulation,
-        Keyboard,
-      ],
+      modules: [Navigation, Autoplay, EffectFade, Keyboard],
       observer: true,
       observeParents: true,
       slidesPerView: 1,
@@ -296,7 +286,6 @@ function initSliders() {
       modules: [
         Navigation,
         EffectFade,
-        Lazy,
         Manipulation,
         Keyboard,
       ],
@@ -412,5 +401,5 @@ window.addEventListener("load", function (e) {
   // Запуск инициализации слайдеров
   initSliders();
   // Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
-  initSlidersScroll();
+  // initSlidersScroll();
 });
